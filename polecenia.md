@@ -6,6 +6,36 @@ git clone https://github.com/ev45ive/git-open-grudzien.git git-open-grudzien-for
 
 git clone https://github.com/ev45ive/git-open-grudzien ./tutaj_sciagnij_pliki
 
+cd git-open-grudzien-fork
+git pull
+
+# Push flow
+git push -u origin nazwa_brancha
+
+<!-- ==== LUB ==== -->
+
+# Fork + pull request Flow
+<!-- git remote add origin https://github.com/ev45ive/git-open-grudzien.git  -->
+
+otwiramy w przegladarce  https://github.com/ev45ive/git-open-grudzien
+
+Klikamy w przegladarce "FORK"
+
+<!-- pobieramy zmiany ze źródła Origin -->
+git pull origin 
+
+<!-- Wysyłąmy zmiany na forka (zdalny clone) -->
+git remote add fork https://github.com/<TWOJA NAZWA W GITHUB>/git-open-grudzien.git 
+git remote
+
+git switch -c moja_nazwa_brancha
+stowrz plik / zrob zmiany
+git commit -a -m "opis"
+
+<!-- git push -u fork lokalna_nazwa:zdalna_nazwa_brancha -->
+<!-- git push -u fork HEAD:moja_nazwa_brancha -->
+git push -u fork moja_nazwa_brancha
+
 
 
 # VsCode
